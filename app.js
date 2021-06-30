@@ -11,16 +11,21 @@ date.innerHTML = new Date().getFullYear();
 //  resetting the close and open toggle's nav height
 const navToggle = document.querySelector(".nav-toggle");
 const linksContainer = document.querySelector(".links-container");
-const links   = document.querySelector(".links");
+const links = document.querySelector(".links");
 
-navToggle.addEventListener("click",function () { 
+navToggle.addEventListener("click", function(){
   const containerHeight = linksContainer.getBoundingClientRect().height;
-
-  if (containerHeight === 0){
-    linksContainer.style.height = `${linksHeight}px`;
+  const linksHeight = links.getBoundingClientRect().height;
+  if(containerHeight === 0){
+    linksContainer.getElementsByClassName.height = `${linksHeight}px`;
   }
-  else{
+  else {
     linksContainer.style.height = 0;
   }
-  
-});
+})
+
+// fixing the navbar
+
+window.addEventListener("scroll", function(){
+  console.log
+})
