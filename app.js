@@ -13,7 +13,7 @@ const navToggle = document.querySelector(".nav-toggle");
 const linksContainer = document.querySelector(".links-container");
 const links = document.querySelector(".links");
 
-navToggle.addEventListener("click", function () {
+navToggle.addEventListener("click", () =>{
 
   const linksHeight = links.getBoundingClientRect().height;
   const containerHeight = linksContainer.getBoundingClientRect().height;
@@ -29,7 +29,7 @@ navToggle.addEventListener("click", function () {
 const navbar = document.getElementById("nav");
 const topLink = document.querySelector(".top-link");
 
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", () =>{
   const scrollHeight = window.pageYOffset;
   const navHeight = navbar.getBoundingClientRect().height;
   if (scrollHeight > navHeight) {
