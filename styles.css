@@ -366,7 +366,7 @@ footer p {
   color: var(--clr-white);
   animation: bounce 2s ease-in-out infinite;
 
-  visibility: hidden;
+  visibility: visible;
   z-index: -100;
 }
 .show-link {

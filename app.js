@@ -3,11 +3,24 @@
 // slice extracts a section of a string without modifying original string
 //offsetTop - A Number, representing the top position of the element, in pixels
 
-// ********** set date ************
+// setDate
+const date = document.getElementById("date");
+date.innerHTML = new Date().getFullYear();
 
-// ********** close links ************
 
-// ********** fixed navbar ************
+//  resetting the close and open toggle's nav height
+const navToggle = document.querySelector(".nav-toggle");
+const linksContainer = document.querySelector(".links-container");
+const links   = document.querySelector(".links");
 
-// ********** smooth scroll ************
-// select links
+navToggle.addEventListener("click",function () { 
+  const containerHeight = linksContainer.getBoundingClientRect().height;
+
+  if (containerHeight === 0){
+    linksContainer.style.height = `${linksHeight}px`;
+  }
+  else{
+    linksContainer.style.height = 0;
+  }
+  
+});
