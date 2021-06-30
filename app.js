@@ -3,12 +3,12 @@
 // slice extracts a section of a string without modifying original string
 //offsetTop - A Number, representing the top position of the element, in pixels
 
-// ********** set date ************
+// **date config **
 // select span
 const date = document.getElementById("date");
 date.innerHTML = new Date().getFullYear();
 
-// ********** close links ************
+// ** setting and calculating the toggl height **
 const navToggle = document.querySelector(".nav-toggle");
 const linksContainer = document.querySelector(".links-container");
 const links = document.querySelector(".links");
@@ -24,7 +24,7 @@ navToggle.addEventListener("click", function () {
   }
 });
 
-// ********** fixed navbar ************
+// ** make the navbar fixed**
 
 const navbar = document.getElementById("nav");
 const topLink = document.querySelector(".top-link");
@@ -39,7 +39,7 @@ window.addEventListener("scroll", function () {
   }
   // setup back to top link
 
-  if (scrollHeight > 500) {
+  if (scrollHeight > 280) {
     console.log("helo");
 
     topLink.classList.add("show-link");
@@ -48,7 +48,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// ********** smooth scroll ************
+// ** smooth scroll **
 
 // select links
 const scrollLinks = document.querySelectorAll(".scroll-link");
@@ -68,7 +68,7 @@ scrollLinks.forEach((link) => {
     if (!fixedNav) {
       position = position - navHeight;
     }
-    if (navHeight > 82) {
+    if (navHeight > 91) {
       position = position + containerHeight;
     }
 
